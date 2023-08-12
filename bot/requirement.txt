@@ -1,0 +1,5 @@
+nonebot2
+datetime
+asyncio
+uvicorn
+nonebot_plugin_apscheduler
