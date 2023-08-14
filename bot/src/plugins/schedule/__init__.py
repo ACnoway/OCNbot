@@ -29,7 +29,7 @@ async def auto_update():
     await get_cf()
     await get_atc()
     await get_nowcoder()
-    await bot.send_msg(message_type="private",message="定时更新成功"+"\n\n防风控编码"+str(time.time()),user_id=QQ号)
+    await bot.send_msg(message_type="private",message="定时更新成功"+"\n\n防风控编码"+str(time.time()),user_id=)
 
 async def get_luogu():
     # 这里调用洛谷api，缓存进文件
