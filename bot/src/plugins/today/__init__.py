@@ -118,11 +118,11 @@ async def get_today():
     #* 统计答案
     ans=""
     if len(results)==0:
-        return '今天没有比赛哦 =￣ω￣='
+        return '今天没有比赛哦 =￣ω￣='+"\n\n防风控编码"+str(time.time())
     else:
         for conts in results:
             ans+="\n\n比赛平台："+ojs[conts[0]][0]
             ans+="\n比赛名称："+conts[1]
             ans+="\n比赛时间："+conts[2]
             ans+="\n比赛链接："+ojs[conts[0]][1]+conts[3]
-        return '找到今天的比赛如下：'+ans
+        return '找到今天的比赛如下：'+ans+"\n\n防风控编码"+str(time.time())

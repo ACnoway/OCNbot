@@ -6,6 +6,7 @@ from nonebot.adapters.onebot.v11 import Bot, Message, GroupMessageEvent,MessageE
 from nonebot.params import CommandArg
 import requests
 import json
+import time
 
 update=on_command('update', priority=1, aliases={'手动更新'})
 
@@ -20,7 +21,7 @@ async def send_receive(bot: Bot, event: MessageEvent):
     await get_cf()
     await get_atc()
     await get_nowcoder()
-    await update.finish("更新成功")
+    await update.finish("更新成功"+"\n\n防风控编码"+str(time.time()))
 
 async def get_luogu():
     # 这里简单返回一个字符串

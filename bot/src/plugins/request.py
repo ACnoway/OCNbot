@@ -4,6 +4,7 @@ from nonebot.adapters.onebot.v11 import Bot, Message, GroupMessageEvent,MessageE
 from nonebot.params import CommandArg
 from nonebot import require
 import asyncio
+import time
 
 self_add=on_request(priority=60)
 group_add=on_request(priority=60)
@@ -24,7 +25,7 @@ today（今日/今日比赛/今天/今天比赛）
 next（最近/最近比赛）
 update（手动更新）
 help
-'''
+'''+"\n\n防风控编码"+str(time.time())
     ))
 
 @group_add.handle()

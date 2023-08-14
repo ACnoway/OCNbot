@@ -50,7 +50,7 @@ async def get_atc(counts):
         if len(results) >= counts:
             break
     if len(results)==0:
-        return "没有找到要开始的atcoder比赛哦"
+        return "没有找到要开始的atcoder比赛哦"+"\n\n防风控编码"+str(time.time())
     else:
         ans=""
         for conts in results:
@@ -58,9 +58,9 @@ async def get_atc(counts):
             ans+="\n比赛时间："+conts[1]
             ans+="\n比赛链接：https://atcoder.jp"+conts[2]
         if len(results) < counts:
-            return 'atcoder最近比赛不足 '+str(counts)+'场，找到最近的 '+str(len(results))+' 场比赛如下：'+ans
+            return 'atcoder最近比赛不足 '+str(counts)+'场，找到最近的 '+str(len(results))+' 场比赛如下：'+ans+"\n\n防风控编码"+str(time.time())
         else:
-            return '找到最近的 '+str(len(results))+' 场atcoder比赛如下：'+ans
+            return '找到最近的 '+str(len(results))+' 场atcoder比赛如下：'+ans+"\n\n防风控编码"+str(time.time())
 
 async def get_preatc(counts):
     results=[]
@@ -84,7 +84,7 @@ async def get_preatc(counts):
         if len(results) >= counts:
             break
     if len(results)==0:
-        return "居然找不到，可能是：\n1. bot裂了\n2. 网站裂了\n3. 缓存裂了\n4. 地球裂了"
+        return "居然找不到，可能是：\n1. bot裂了\n2. 网站裂了\n3. 缓存裂了\n4. 地球裂了"+"\n\n防风控编码"+str(time.time())
     else:
         ans=""
         for conts in results:
@@ -92,6 +92,6 @@ async def get_preatc(counts):
             ans+="\n比赛时间："+conts[1]
             ans+="\n比赛链接：https://atcoder.jp"+conts[2]
         if len(results) < counts:
-            return '缓存中atcoder历史比赛不足 '+str(counts)+'场，找到历史 '+str(len(results))+' 场比赛如下：'+ans
+            return '缓存中atcoder历史比赛不足 '+str(counts)+'场，找到历史 '+str(len(results))+' 场比赛如下：'+ans+"\n\n防风控编码"+str(time.time())
         else:
-            return '找到历史 '+str(len(results))+' 场atcoder比赛如下：'+ans
+            return '找到历史 '+str(len(results))+' 场atcoder比赛如下：'+ans+"\n\n防风控编码"+str(time.time())

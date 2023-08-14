@@ -3,6 +3,7 @@ from nonebot.permission import SUPERUSER
 from nonebot.adapters.onebot.v11 import Bot, Message, GroupMessageEvent,MessageEvent,PrivateMessageEvent
 from nonebot.params import CommandArg
 from nonebot import require
+import time
 
 help=on_command('help', priority=1)
 
@@ -18,5 +19,5 @@ today（今日/今日比赛/今天/今天比赛）
 next（最近/最近比赛）
 update（手动更新）
 help
-'''
+'''+"\n\n防风控编码"+str(time.time())
     await help.finish(res)

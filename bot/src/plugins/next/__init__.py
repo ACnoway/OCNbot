@@ -116,7 +116,7 @@ async def get_next(counts):
     # if cnt_nowcoder!=0 and int(today)!=int(time_now): cnt_nowcoder=0
     
     n=len(results)
-    if n==0: return '最近没有比赛哦'
+    if n==0: return '最近没有比赛哦'+"\n\n防风控编码"+str(time.time())
     else:
         # contest_list.sort(key=operator.attrgetter('time'))
         ans=""
@@ -141,6 +141,6 @@ async def get_next(counts):
                     if cnt == counts:
                         break
         if cnt < counts:
-            return '最近比赛不足 '+str(counts)+'场，找到最近的 '+str(cnt)+' 场比赛如下：'+ans
+            return '最近比赛不足 '+str(counts)+'场，找到最近的 '+str(cnt)+' 场比赛如下：'+ans+"\n\n防风控编码"+str(time.time())
         else:
-            return '找到最近的 '+str(cnt)+' 场比赛如下：'+ans
+            return '找到最近的 '+str(cnt)+' 场比赛如下：'+ans+"\n\n防风控编码"+str(time.time())

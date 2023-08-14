@@ -29,7 +29,7 @@ async def auto_update():
     await get_cf()
     await get_atc()
     await get_nowcoder()
-    await bot.send_msg(message_type="private",message="定时更新成功",user_id=在此处填写定时更新通知要发送到的QQ号)
+    await bot.send_msg(message_type="private",message="定时更新成功"+"\n\n防风控编码"+str(time.time()),user_id=在此处填写定时更新通知要发送到的QQ号)
 
 async def get_luogu():
     # 这里调用洛谷api，缓存进文件
@@ -184,11 +184,11 @@ async def get_today():
     #* 统计答案
     ans=""
     if len(results)==0:
-        return '今天没有比赛哦 =￣ω￣='
+        return '今天没有比赛哦 =￣ω￣='+"\n\n防风控编码"+str(time.time())
     else:
         for conts in results:
             ans+="\n\n比赛平台："+ojs[conts[0]][0]
             ans+="\n比赛名称："+conts[1]
             ans+="\n比赛时间："+conts[2]
             ans+="\n比赛链接："+ojs[conts[0]][1]+conts[3]
-        return '找到今天的比赛如下：'+ans
+        return '找到今天的比赛如下：'+ans+"\n\n防风控编码"+str(time.time())
