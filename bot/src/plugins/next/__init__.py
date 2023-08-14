@@ -7,7 +7,7 @@ import json
 from bs4 import BeautifulSoup
 import datetime
 
-next=on_command('next', priority=1, aliases={'最近','最近比赛'}, force_whitespace=True)
+next=on_command('next', priority=1, aliases={'最近','最近比赛'}, force_whitespace=False)
 
 @next.handle()
 async def send_receive(bot: Bot, event: MessageEvent):

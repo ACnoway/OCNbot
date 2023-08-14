@@ -5,8 +5,8 @@ from nonebot.params import CommandArg
 import time
 from bs4 import BeautifulSoup
 import datetime
-atc=on_command('atc', priority=1, force_whitespace=True)
-preatc=on_command('preatc', priority=1, force_whitespace=True)
+atc=on_command('atc', priority=1, force_whitespace=False)
+preatc=on_command('preatc', priority=1, force_whitespace=False)
 
 @atc.handle()
 async def send_receive(bot: Bot, event: MessageEvent):

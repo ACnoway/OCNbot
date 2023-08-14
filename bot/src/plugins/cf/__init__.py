@@ -4,8 +4,8 @@ from nonebot.adapters.onebot.v11 import Bot, Message, GroupMessageEvent,MessageE
 from nonebot.params import CommandArg
 import time
 import json
-cf=on_command('cf', priority=1, force_whitespace=True)
-precf=on_command('precf', priority=1, force_whitespace=True)
+cf=on_command('cf', priority=1, force_whitespace=False)
+precf=on_command('precf', priority=1, force_whitespace=False)
 
 @cf.handle()
 async def send_receive(bot: Bot, event: MessageEvent):

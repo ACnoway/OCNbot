@@ -5,8 +5,8 @@ from nonebot.params import CommandArg
 import time
 from bs4 import BeautifulSoup
 import datetime
-nc=on_command('nc', priority=1, aliases={"牛客"}, force_whitespace=True)
-prenc=on_command('prenc', priority=1, aliases={"牛客历史"}, force_whitespace=True)
+nc=on_command('nc', priority=1, aliases={"牛客"}, force_whitespace=False)
+prenc=on_command('prenc', priority=1, aliases={"牛客历史"}, force_whitespace=False)
 
 @nc.handle()
 async def send_receive(bot: Bot, event: MessageEvent):

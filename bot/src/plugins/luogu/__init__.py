@@ -4,8 +4,8 @@ from nonebot.adapters.onebot.v11 import Bot, Message, GroupMessageEvent,MessageE
 from nonebot.params import CommandArg
 import time
 import json
-luogu=on_command('luogu', priority=1, aliases={"洛谷"}, force_whitespace=True)
-preluogu=on_command('preluogu', priority=1, aliases={"洛谷历史"}, force_whitespace=True)
+luogu=on_command('luogu', priority=1, aliases={"洛谷"}, force_whitespace=False)
+preluogu=on_command('preluogu', priority=1, aliases={"洛谷历史"}, force_whitespace=False)
 
 @luogu.handle()
 async def send_receive(bot: Bot, event: MessageEvent):
