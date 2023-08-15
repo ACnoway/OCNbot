@@ -1,6 +1,6 @@
 [原版](https://github.com/CupidsBow/koishi)，在此基础上优化了代码风格并添加了对洛谷的支持，支持在查询比赛时指定查询数量，联系方式在最下方。
 
-# koishi
+# OCNbot
 
 基于 [nonebot2](https://github.com/nonebot/nonebot2) 与 [gocqhttp](https://github.com/Mrs4s/go-cqhttp) 的 QQ 机器人。
 
